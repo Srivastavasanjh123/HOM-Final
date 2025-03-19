@@ -3,12 +3,14 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section style={styles.hero} id="hero">
-      <video autoPlay loop muted playsInline style={styles.video}>
-  <source src="/12716-241674181_small.mp4" type="video/mp4" />
-  <source src="/12716-241674181_small.webm" type="video/webm" />
-  Your browser does not support the video tag.
-</video>
+      {/* Background Image */}
+      <img 
+        src="Screenshot_19-3-2025_225530_www.redpandacompress.com.jpeg" 
+        alt="Background"
+        style={styles.image}
+      />
 
+      {/* Content */}
       <div style={styles.content}>
         <h1 style={styles.heading}>Welcome to Our Service</h1>
         <p style={styles.subheading}>Premium solutions for all your needs</p>
@@ -27,9 +29,10 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    color: "white",
+    color: "black",
+    overflow: "hidden",
   },
-  video: {
+  image: {
     position: "absolute",
     top: "0",
     left: "0",
@@ -40,6 +43,9 @@ const styles = {
   },
   content: {
     zIndex: "1",
+    backgroundColor: "rgba(255, 255, 255, 0.97)",
+    padding: "20px",
+    borderRadius: "10px",
   },
   heading: {
     fontSize: "3rem",
